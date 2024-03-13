@@ -1,0 +1,3 @@
+[submodule "Backend/Frontend/nederali"]
+	path = Backend/Frontend/nederali
+	url = https://github.com/Menmali/nederali
