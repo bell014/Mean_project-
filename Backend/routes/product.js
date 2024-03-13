@@ -36,7 +36,7 @@ router.post('/addproduct', upload.single('image'), async (req, res) => { // Use 
   // Read (GET) all products
 
 
-  router.get('/products', async (req, res) => {
+  router.get('/show', async (req, res) => {
     try {
       const products = await product.find();
       res.status(200).json(products);

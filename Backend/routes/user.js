@@ -26,24 +26,23 @@ router.post('/signup', async (req, res) => {
 
 router.post('/login', async (req, res) => {
   
-  data = req.body 
+  let data = req.body 
   const user= await User.findOne({email: data.email})
 if(!user){
   return res.status(404).send( "No account found with this email." )
 
-
 }else{
-    validpass = bcrypt.compareSync(data.password, user.password)
+    let validpass = bcrypt.compareSync(data.password, user.password)
      if (!validpass) {
        return res.status(401).send("Wrong password.")
      }else{
-      payload={
+     let payload={
         id: user._id,
         name : user.name,
         email :user.email
       }
         let token = jwt.sign(payload,'12345')
-        res.status(200).json({mytoken:token })
+        res.status(200).json({mytoken:token})
     }
 
 }
