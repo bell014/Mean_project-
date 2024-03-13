@@ -1,0 +1,33 @@
+
+    <div class="row">
+        <div class="col-md-12">
+            <form>
+                <h2>Sign Up</h2>
+
+                <fieldset>
+                    <legend><span class="number">1</span> Needed Info :)</legend>
+
+                    <label for="name"> First Name:</label>
+                    <input [(ngModel)]="user.username" type="text" id="name" name="name">
+
+                    <label for="name"> Last Name:</label>
+                    <input [(ngModel)]="user.lastname" type="text" id="name" name="name">
+
+                    <label for="mail">Email:</label>
+                    <input [(ngModel)]="user.email" type="email" id="mail" name="mail">
+
+                    <label for="password">Password:</label>
+                    <input [(ngModel)]="user.password" type="password" id="password" name="password">
+
+
+                </fieldset>
+                <div class="but">
+                    <button (click)="register()"    type="submit" name="but">Sign Up</button>
+                </div>
+                
+
+                <p> Already Have An Account ? <a routerLink="/login" class="link">Login</a></p>
+                <!-- Lien pour la connexion -->
+            </form>
+        </div>
+    </div>

@@ -1,0 +1,112 @@
+.logo img {
+  margin: 0;
+  width: 70px;
+  height: 70px;
+}
+a {
+  text-decoration: none;
+}
+.btn {
+  background: #474647;
+  user-select: none;
+  text-transform: capitalize;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 0;
+  margin-bottom: 0;
+  padding: 27px 44px;
+  border-radius: 0px;
+  margin: 10px;
+  cursor: pointer;
+  transition: color 0.4s linear;
+  position: relative;
+  z-index: 1;
+  border: 0;
+  overflow: hidden;
+  margin: 0;
+}
+.btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 101%;
+  height: 101%;
+  background: #000000;
+  z-index: 1;
+  border-radius: 5px;
+  transition: transform 0.5s;
+  transition-timing-function: ease;
+  transform-origin: 0 0;
+  transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+  transform: scaleX(0);
+  border-radius: 0;
+}
+.btn:hover::before {
+  transform: scaleX(1);
+  color: #fff !important;
+  z-index: -1;
+}
+.head-btn2 {
+  background: none;
+  border: 1px solid #000000;
+  color: black;
+}
+
+.head-btn2::before {
+  color: #fff !important;
+}
+.head-btn2:hover {
+  color: #fff;
+}
+.head-btn1 {
+  margin-right: 5px;
+}
+
+.header-area .header-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.header-area .menu-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-area .main-menu ul li {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+}
+.header-area .main-menu ul li a {
+  margin-top: 20px;
+  color: #000000;
+  padding: 37px;
+  font-family: "Barlow", sans-serif;
+  display: block;
+  font-size: 18px;
+  font-weight: bolder;
+  position: relative;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.header-area .main-menu ul li:hover > a {
+  color: #747474;
+  font-size: 19px;
+  font-weight: bolder;
+}
+
+.header-sticky.sticky-bar {
+  background: #fff;
+}
+a {
+  cursor: pointer;
+}
